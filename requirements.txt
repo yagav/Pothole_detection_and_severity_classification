@@ -1,4 +1,5 @@
 streamlit
+git+https://github.com/sunsmarterjie/yolov12.git
 ultralytics
 opencv-python-headless
 numpy
