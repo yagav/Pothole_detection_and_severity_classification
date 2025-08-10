@@ -58,7 +58,7 @@ if uploaded_file is not None:
     st.subheader("Input Image")
     st.image(cv2.cvtColor(img, cv2.COLOR_BGR2RGB), use_container_width=True)
 
-    for detects in model([img])[0]:
+    for detects in model.predict(img)[0]:
         detect = detects.boxes.cpu().numpy()[0]
         original_h, original_w =  detect.orig_shape
         x,y = detect.xyxy[0][:2]
